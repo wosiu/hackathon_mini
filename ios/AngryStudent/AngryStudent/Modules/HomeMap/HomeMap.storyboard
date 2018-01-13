@@ -10,16 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Events Map View Controller-->
         <scene sceneID="kDH-O5-fJx">
             <objects>
-                <viewController id="wSl-h6-Zy5" sceneMemberID="viewController">
+                <viewController id="wSl-h6-Zy5" customClass="EventsMapViewController" customModule="AngryStudent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0FP-fi-hoz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oa8-a0-FT0" customClass="EventsMapView" customModule="AngryStudent" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DGE-p0-cif">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.89939887288400255" blue="0.40759048948657461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oa8-a0-FT0" firstAttribute="leading" secondItem="HiM-7S-Qqq" secondAttribute="leading" id="084-dw-93L"/>
+                            <constraint firstItem="HiM-7S-Qqq" firstAttribute="trailing" secondItem="DGE-p0-cif" secondAttribute="trailing" id="2wS-MF-zJS"/>
+                            <constraint firstItem="Oa8-a0-FT0" firstAttribute="top" secondItem="HiM-7S-Qqq" secondAttribute="top" id="6UM-rd-4K5"/>
+                            <constraint firstItem="HiM-7S-Qqq" firstAttribute="bottom" secondItem="Oa8-a0-FT0" secondAttribute="bottom" id="J1c-aE-0I5"/>
+                            <constraint firstItem="HiM-7S-Qqq" firstAttribute="bottom" secondItem="DGE-p0-cif" secondAttribute="bottom" id="W5L-J2-ijN"/>
+                            <constraint firstItem="HiM-7S-Qqq" firstAttribute="trailing" secondItem="Oa8-a0-FT0" secondAttribute="trailing" id="XwA-94-KMN"/>
+                            <constraint firstItem="DGE-p0-cif" firstAttribute="top" secondItem="HiM-7S-Qqq" secondAttribute="top" id="YgF-jA-Zo2"/>
+                            <constraint firstItem="DGE-p0-cif" firstAttribute="leading" secondItem="HiM-7S-Qqq" secondAttribute="leading" id="jaW-fA-izy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HiM-7S-Qqq"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="DGE-p0-cif" id="qpN-p3-hUF"/>
+                        <outlet property="eventsMapView" destination="Oa8-a0-FT0" id="7jn-s3-Cdf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZ9-yo-toc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

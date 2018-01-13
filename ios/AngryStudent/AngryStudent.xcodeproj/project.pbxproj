@@ -24,9 +24,9 @@
 		34B492CE200A3714000C5945 /* BasicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B492CD200A3714000C5945 /* BasicTableView.swift */; };
 		34B492D0200A3776000C5945 /* BasicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B492CF200A3776000C5945 /* BasicCollectionView.swift */; };
 		34B492D3200A3A9E000C5945 /* EventsMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B492D2200A3A9E000C5945 /* EventsMap.storyboard */; };
-		34B492D6200A3C0D000C5945 /* EventsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B492D5200A3C0D000C5945 /* EventsMapViewController.swift */; };
-		34B492D9200A3D42000C5945 /* EventsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B492D8200A3D42000C5945 /* EventsMapView.swift */; };
 		34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB4C200A65FB00916A88 /* MapService.swift */; };
+		34BDEB53200A8EE100916A88 /* EventsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB50200A8EE100916A88 /* EventsMapView.swift */; };
+		34BDEB55200A8EE100916A88 /* EventsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB52200A8EE100916A88 /* EventsMapViewController.swift */; };
 		34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E862008C8960056AC2E /* AppDelegate.swift */; };
 		34C55E892008C8960056AC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E882008C8960056AC2E /* ViewController.swift */; };
 		34C55E8E2008C8960056AC2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C55E8D2008C8960056AC2E /* Assets.xcassets */; };
@@ -91,9 +91,9 @@
 		34B492CD200A3714000C5945 /* BasicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableView.swift; sourceTree = "<group>"; };
 		34B492CF200A3776000C5945 /* BasicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionView.swift; sourceTree = "<group>"; };
 		34B492D2200A3A9E000C5945 /* EventsMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsMap.storyboard; sourceTree = "<group>"; };
-		34B492D5200A3C0D000C5945 /* EventsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapViewController.swift; sourceTree = "<group>"; };
-		34B492D8200A3D42000C5945 /* EventsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapView.swift; sourceTree = "<group>"; };
 		34BDEB4C200A65FB00916A88 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
+		34BDEB50200A8EE100916A88 /* EventsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsMapView.swift; sourceTree = "<group>"; };
+		34BDEB52200A8EE100916A88 /* EventsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsMapViewController.swift; sourceTree = "<group>"; };
 		34C55E832008C8950056AC2E /* AngryStudent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngryStudent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C55E862008C8960056AC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C55E882008C8960056AC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +185,8 @@
 		3455BE4E200A2C9900F49E00 /* HomeMap */ = {
 			isa = PBXGroup;
 			children = (
+				34BDEB50200A8EE100916A88 /* EventsMapView.swift */,
+				34BDEB52200A8EE100916A88 /* EventsMapViewController.swift */,
 				3455BE51200A2CBB00F49E00 /* HomeMap.storyboard */,
 			);
 			path = HomeMap;
@@ -290,7 +292,6 @@
 		34B492D1200A39D5000C5945 /* EventsMap */ = {
 			isa = PBXGroup;
 			children = (
-				34B492D4200A3C00000C5945 /* home */,
 				34B492D7200A3D11000C5945 /* views */,
 				9EF3D837200A7B4F00DCE9A2 /* EventViewController.swift */,
 				34B492D2200A3A9E000C5945 /* EventsMap.storyboard */,
@@ -300,19 +301,10 @@
 			path = EventsMap;
 			sourceTree = "<group>";
 		};
-		34B492D4200A3C00000C5945 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				34B492D5200A3C0D000C5945 /* EventsMapViewController.swift */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
 		34B492D7200A3D11000C5945 /* views */ = {
 			isa = PBXGroup;
 			children = (
 				9EF3D830200A6EF900DCE9A2 /* TableViewCells */,
-				34B492D8200A3D42000C5945 /* EventsMapView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -814,14 +806,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EF3D832200A6F5B00DCE9A2 /* EventTableViewCell.swift in Sources */,
-				34B492D9200A3D42000C5945 /* EventsMapView.swift in Sources */,
 				3466E7122008D5BC00ACEF27 /* R.swift in Sources */,
 				34B492D0200A3776000C5945 /* BasicCollectionView.swift in Sources */,
+				34BDEB55200A8EE100916A88 /* EventsMapViewController.swift in Sources */,
 				9EF3D829200A577D00DCE9A2 /* UIImageExtensions.swift in Sources */,
 				9EF3D838200A7B4F00DCE9A2 /* EventViewController.swift in Sources */,
 				34B492CA200A3654000C5945 /* BasicViewController.swift in Sources */,
 				9EF3D81D200A50C600DCE9A2 /* TabBarViewController.swift in Sources */,
 				3466E7192008DECA00ACEF27 /* ApiService.swift in Sources */,
+				34BDEB53200A8EE100916A88 /* EventsMapView.swift in Sources */,
 				34B492C2200A3148000C5945 /* UIFont+AppFonts.swift in Sources */,
 				34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */,
 				34B492CC200A36C1000C5945 /* BasicViews.swift in Sources */,
@@ -832,7 +825,6 @@
 				9EF3D81F200A514D00DCE9A2 /* TabBarViewModel.swift in Sources */,
 				34B492C0200A30F8000C5945 /* UIColor+AppColor.swift in Sources */,
 				3466E7162008D5E200ACEF27 /* R_extensions.swift in Sources */,
-				34B492D6200A3C0D000C5945 /* EventsMapViewController.swift in Sources */,
 				9EF3D83A200A7B5900DCE9A2 /* EventViewModel.swift in Sources */,
 				34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */,
 			);
