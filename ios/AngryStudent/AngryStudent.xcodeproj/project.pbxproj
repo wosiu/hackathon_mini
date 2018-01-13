@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		19016716982A9978794EAAC3 /* Pods_AngryStudentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6339B7CC598A7DAF9E918948 /* Pods_AngryStudentUITests.framework */; };
+		3455BE52200A2CBB00F49E00 /* HomeMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3455BE51200A2CBB00F49E00 /* HomeMap.storyboard */; };
+		3455BE54200A2CD400F49E00 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3455BE53200A2CD400F49E00 /* Menu.storyboard */; };
+		3455BE56200A2CF700F49E00 /* Voting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3455BE55200A2CF700F49E00 /* Voting.storyboard */; };
 		3466E6F52008D3B800ACEF27 /* strings_screens.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3466E6EE2008D3B800ACEF27 /* strings_screens.xml */; };
 		3466E7012008D47800ACEF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3466E6FF2008D47800ACEF27 /* Main.storyboard */; };
 		3466E7022008D47800ACEF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3466E7002008D47800ACEF27 /* LaunchScreen.storyboard */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		1044A18A430559D35DE3DA0B /* Pods-AngryStudentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngryStudentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AngryStudentTests/Pods-AngryStudentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E8DD23AADFBF4B9E2C79AE5 /* Pods-AngryStudentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngryStudentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AngryStudentUITests/Pods-AngryStudentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3455BE51200A2CBB00F49E00 /* HomeMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeMap.storyboard; sourceTree = "<group>"; };
+		3455BE53200A2CD400F49E00 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		3455BE55200A2CF700F49E00 /* Voting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Voting.storyboard; sourceTree = "<group>"; };
 		3466E6E32008CCC000ACEF27 /* ios-strings.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "ios-strings.rb"; sourceTree = "<group>"; };
 		3466E6E42008CCC000ACEF27 /* Translations.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Translations.xcodeproj; sourceTree = "<group>"; };
 		3466E6EE2008D3B800ACEF27 /* strings_screens.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = strings_screens.xml; sourceTree = "<group>"; };
@@ -118,6 +124,47 @@
 				6339B7CC598A7DAF9E918948 /* Pods_AngryStudentUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3455BE49200A2C3B00F49E00 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		3455BE4D200A2C4F00F49E00 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3455BE4E200A2C9900F49E00 /* HomeMap */,
+				3455BE50200A2C9900F49E00 /* Menu */,
+				3455BE4F200A2C9900F49E00 /* Voting */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3455BE4E200A2C9900F49E00 /* HomeMap */ = {
+			isa = PBXGroup;
+			children = (
+				3455BE51200A2CBB00F49E00 /* HomeMap.storyboard */,
+			);
+			path = HomeMap;
+			sourceTree = "<group>";
+		};
+		3455BE4F200A2C9900F49E00 /* Voting */ = {
+			isa = PBXGroup;
+			children = (
+				3455BE55200A2CF700F49E00 /* Voting.storyboard */,
+			);
+			path = Voting;
+			sourceTree = "<group>";
+		};
+		3455BE50200A2C9900F49E00 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3455BE53200A2CD400F49E00 /* Menu.storyboard */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		3466E6E12008CCC000ACEF27 /* Scripts */ = {
@@ -214,7 +261,9 @@
 		34C55E852008C8950056AC2E /* AngryStudent */ = {
 			isa = PBXGroup;
 			children = (
+				3455BE4D200A2C4F00F49E00 /* Modules */,
 				3466E7172008DEB500ACEF27 /* Services */,
+				3455BE49200A2C3B00F49E00 /* Styles */,
 				34C55E862008C8960056AC2E /* AppDelegate.swift */,
 				34C55E882008C8960056AC2E /* ViewController.swift */,
 				3466E7002008D47800ACEF27 /* LaunchScreen.storyboard */,
@@ -380,8 +429,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3455BE52200A2CBB00F49E00 /* HomeMap.storyboard in Resources */,
 				3466E7132008D5BC00ACEF27 /* Localizable.strings in Resources */,
 				3466E7012008D47800ACEF27 /* Main.storyboard in Resources */,
+				3455BE56200A2CF700F49E00 /* Voting.storyboard in Resources */,
+				3455BE54200A2CD400F49E00 /* Menu.storyboard in Resources */,
 				3466E7022008D47800ACEF27 /* LaunchScreen.storyboard in Resources */,
 				34C55E8E2008C8960056AC2E /* Assets.xcassets in Resources */,
 				3466E6F52008D3B800ACEF27 /* strings_screens.xml in Resources */,
@@ -726,6 +778,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU34X5QPPY;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AngryStudent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PawelCzerwinski.mim.AngryStudent;
@@ -742,6 +795,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU34X5QPPY;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AngryStudent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PawelCzerwinski.mim.AngryStudent;
