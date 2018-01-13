@@ -23,8 +23,8 @@ extension IndoorwayObjectInfo {
     return R.string.common_room_name[number]
   }
   
-  static func isRoom(_ obj: IndoorwayObjectInfo) -> Bool {
-    return idToNumber[obj.objectId] != nil
+  var isRoom: Bool {
+    return idToNumber[objectId] != nil
   }
 }
 

@@ -228,7 +228,6 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   /// - parameter mapView:  The map view that received tap
   /// - parameter location: The location where tap was received
   @objc func mapView(_ mapView: IndoorwayMapView, didTapLocation location: IndoorwayLatLon) {
-    print("\(location.longitude), \(location.latitude)")
   }
   
   /// Method tells the delegate that the location of the user was updated.
@@ -250,11 +249,12 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   
   
   @objc func mapView(_ mapView: IndoorwayMapView, shouldSelectIndoorObject indoorObjectInfo: IndoorwayObjectInfo) -> Bool {
-    return false
+    return indoorObjectInfo.isRoom
   }
   
   
   @objc func mapView(_ mapView: IndoorwayMapView, didSelectIndoorObject indoorObjectInfo: IndoorwayObjectInfo) {
+    delegate?.eventsMapView(didSelect: self, object: indoorObjectInfo)
     mapView.deselectObject()
   }
   

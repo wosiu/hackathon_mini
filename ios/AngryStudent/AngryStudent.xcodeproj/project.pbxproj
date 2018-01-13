@@ -27,9 +27,9 @@
 		34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB4C200A65FB00916A88 /* MapService.swift */; };
 		34BDEB53200A8EE100916A88 /* EventsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB50200A8EE100916A88 /* EventsMapView.swift */; };
 		34BDEB55200A8EE100916A88 /* EventsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB52200A8EE100916A88 /* EventsMapViewController.swift */; };
-		34BDEB57200A924D00916A88 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB56200A924D00916A88 /* CreateEventViewController.swift */; };
-		34BDEB59200AB72E00916A88 /* IndoorwayObjectInfo+Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB58200AB72E00916A88 /* IndoorwayObjectInfo+Room.swift */; };
-		34BDEB5B200ABD4400916A88 /* IndoorwayMapDescription+Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB5A200ABD4400916A88 /* IndoorwayMapDescription+Floor.swift */; };
+		34BDEB5F200ABFCB00916A88 /* IndoorwayMapDescription+Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB5D200ABFCA00916A88 /* IndoorwayMapDescription+Floor.swift */; };
+		34BDEB60200ABFCB00916A88 /* IndoorwayObjectInfo+Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB5E200ABFCA00916A88 /* IndoorwayObjectInfo+Room.swift */; };
+		34BDEB62200ABFE200916A88 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB61200ABFE200916A88 /* CreateEventViewController.swift */; };
 		34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E862008C8960056AC2E /* AppDelegate.swift */; };
 		34C55E892008C8960056AC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E882008C8960056AC2E /* ViewController.swift */; };
 		34C55E8E2008C8960056AC2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C55E8D2008C8960056AC2E /* Assets.xcassets */; };
@@ -46,6 +46,14 @@
 		9EF3D838200A7B4F00DCE9A2 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D837200A7B4F00DCE9A2 /* EventViewController.swift */; };
 		9EF3D83A200A7B5900DCE9A2 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D839200A7B5900DCE9A2 /* EventViewModel.swift */; };
 		9EF3D83C200A7B6900DCE9A2 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF3D83B200A7B6900DCE9A2 /* Events.storyboard */; };
+		9EF3D845200A92F200DCE9A2 /* OwnerVotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D844200A92F200DCE9A2 /* OwnerVotesViewController.swift */; };
+		9EF3D847200A92FB00DCE9A2 /* OwnerVotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D846200A92FB00DCE9A2 /* OwnerVotesViewModel.swift */; };
+		9EF3D849200A938A00DCE9A2 /* GroupEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D848200A938A00DCE9A2 /* GroupEvent.swift */; };
+		9EF3D84B200A9B3B00DCE9A2 /* OwnerVotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D84A200A9B3B00DCE9A2 /* OwnerVotesView.swift */; };
+		9EF3D84D200AA59500DCE9A2 /* OwnerVotes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF3D84C200AA59500DCE9A2 /* OwnerVotes.storyboard */; };
+		9EF3D84F200AA9AA00DCE9A2 /* EventsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D84E200AA9AA00DCE9A2 /* EventsMapViewModel.swift */; };
+		9EF3D852200AB43000DCE9A2 /* ParticipaterVotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D851200AB43000DCE9A2 /* ParticipaterVotesViewModel.swift */; };
+		9EF3D854200AB43F00DCE9A2 /* ParticipaterVotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D853200AB43F00DCE9A2 /* ParticipaterVotesView.swift */; };
 		EB172C34B60507C89CFE9581 /* Pods_AngryStudent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9007E761F283643100B13E8B /* Pods_AngryStudent.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,9 +105,9 @@
 		34BDEB4C200A65FB00916A88 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		34BDEB50200A8EE100916A88 /* EventsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsMapView.swift; sourceTree = "<group>"; };
 		34BDEB52200A8EE100916A88 /* EventsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsMapViewController.swift; sourceTree = "<group>"; };
-		34BDEB56200A924D00916A88 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
-		34BDEB58200AB72E00916A88 /* IndoorwayObjectInfo+Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndoorwayObjectInfo+Room.swift"; sourceTree = "<group>"; };
-		34BDEB5A200ABD4400916A88 /* IndoorwayMapDescription+Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndoorwayMapDescription+Floor.swift"; sourceTree = "<group>"; };
+		34BDEB5D200ABFCA00916A88 /* IndoorwayMapDescription+Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndoorwayMapDescription+Floor.swift"; sourceTree = "<group>"; };
+		34BDEB5E200ABFCA00916A88 /* IndoorwayObjectInfo+Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndoorwayObjectInfo+Room.swift"; sourceTree = "<group>"; };
+		34BDEB61200ABFE200916A88 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		34C55E832008C8950056AC2E /* AngryStudent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngryStudent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C55E862008C8960056AC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C55E882008C8960056AC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +134,14 @@
 		9EF3D837200A7B4F00DCE9A2 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = AngryStudent/Modules/EventsMap/EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		9EF3D839200A7B5900DCE9A2 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		9EF3D83B200A7B6900DCE9A2 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		9EF3D844200A92F200DCE9A2 /* OwnerVotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVotesViewController.swift; sourceTree = "<group>"; };
+		9EF3D846200A92FB00DCE9A2 /* OwnerVotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVotesViewModel.swift; sourceTree = "<group>"; };
+		9EF3D848200A938A00DCE9A2 /* GroupEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEvent.swift; sourceTree = "<group>"; };
+		9EF3D84A200A9B3B00DCE9A2 /* OwnerVotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerVotesView.swift; sourceTree = "<group>"; };
+		9EF3D84C200AA59500DCE9A2 /* OwnerVotes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OwnerVotes.storyboard; sourceTree = "<group>"; };
+		9EF3D84E200AA9AA00DCE9A2 /* EventsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapViewModel.swift; sourceTree = "<group>"; };
+		9EF3D851200AB43000DCE9A2 /* ParticipaterVotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipaterVotesViewModel.swift; sourceTree = "<group>"; };
+		9EF3D853200AB43F00DCE9A2 /* ParticipaterVotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipaterVotesView.swift; sourceTree = "<group>"; };
 		AB552A534060239AB97D6FED /* Pods-AngryStudent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngryStudent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AngryStudent/Pods-AngryStudent.debug.xcconfig"; sourceTree = "<group>"; };
 		F22EBCEAA153FA6A59B600E8 /* Pods-AngryStudent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngryStudent.release.xcconfig"; path = "Pods/Target Support Files/Pods-AngryStudent/Pods-AngryStudent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +196,8 @@
 		3455BE4D200A2C4F00F49E00 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9EF3D850200AB3E200DCE9A2 /* ParticipaterVotes */,
+				9EF3D843200A927B00DCE9A2 /* OwnerVotes */,
 				9EF3D81B200A50AA00DCE9A2 /* TabBar */,
 				34B492D1200A39D5000C5945 /* EventsMap */,
 				3455BE4E200A2C9900F49E00 /* HomeMap */,
@@ -192,9 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				34BDEB50200A8EE100916A88 /* EventsMapView.swift */,
+				34BDEB61200ABFE200916A88 /* CreateEventViewController.swift */,
 				34BDEB52200A8EE100916A88 /* EventsMapViewController.swift */,
-				34BDEB56200A924D00916A88 /* CreateEventViewController.swift */,
 				3455BE51200A2CBB00F49E00 /* HomeMap.storyboard */,
+				9EF3D84E200AA9AA00DCE9A2 /* EventsMapViewModel.swift */,
 			);
 			path = HomeMap;
 			sourceTree = "<group>";
@@ -413,8 +432,9 @@
 			isa = PBXGroup;
 			children = (
 				9EF3D82E200A6CB000DCE9A2 /* Event.swift */,
-				34BDEB58200AB72E00916A88 /* IndoorwayObjectInfo+Room.swift */,
-				34BDEB5A200ABD4400916A88 /* IndoorwayMapDescription+Floor.swift */,
+				9EF3D848200A938A00DCE9A2 /* GroupEvent.swift */,
+				34BDEB5D200ABFCA00916A88 /* IndoorwayMapDescription+Floor.swift */,
+				34BDEB5E200ABFCA00916A88 /* IndoorwayObjectInfo+Room.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -426,6 +446,26 @@
 				9EF3D835200A792000DCE9A2 /* EventTableViewHeader.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		9EF3D843200A927B00DCE9A2 /* OwnerVotes */ = {
+			isa = PBXGroup;
+			children = (
+				9EF3D844200A92F200DCE9A2 /* OwnerVotesViewController.swift */,
+				9EF3D846200A92FB00DCE9A2 /* OwnerVotesViewModel.swift */,
+				9EF3D84A200A9B3B00DCE9A2 /* OwnerVotesView.swift */,
+				9EF3D84C200AA59500DCE9A2 /* OwnerVotes.storyboard */,
+			);
+			path = OwnerVotes;
+			sourceTree = "<group>";
+		};
+		9EF3D850200AB3E200DCE9A2 /* ParticipaterVotes */ = {
+			isa = PBXGroup;
+			children = (
+				9EF3D851200AB43000DCE9A2 /* ParticipaterVotesViewModel.swift */,
+				9EF3D853200AB43F00DCE9A2 /* ParticipaterVotesView.swift */,
+			);
+			path = ParticipaterVotes;
 			sourceTree = "<group>";
 		};
 		F9A5B7F4F1376E986FC8389F /* Pods */ = {
@@ -568,6 +608,7 @@
 				3466E7132008D5BC00ACEF27 /* Localizable.strings in Resources */,
 				3466E7012008D47800ACEF27 /* Main.storyboard in Resources */,
 				34B492D3200A3A9E000C5945 /* EventsMap.storyboard in Resources */,
+				9EF3D84D200AA59500DCE9A2 /* OwnerVotes.storyboard in Resources */,
 				3466E7022008D47800ACEF27 /* LaunchScreen.storyboard in Resources */,
 				34C55E8E2008C8960056AC2E /* Assets.xcassets in Resources */,
 				9EF3D822200A55AC00DCE9A2 /* Friends.storyboard in Resources */,
@@ -814,30 +855,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF3D849200A938A00DCE9A2 /* GroupEvent.swift in Sources */,
 				9EF3D832200A6F5B00DCE9A2 /* EventTableViewCell.swift in Sources */,
+				9EF3D84B200A9B3B00DCE9A2 /* OwnerVotesView.swift in Sources */,
 				3466E7122008D5BC00ACEF27 /* R.swift in Sources */,
-				34BDEB59200AB72E00916A88 /* IndoorwayObjectInfo+Room.swift in Sources */,
+				9EF3D852200AB43000DCE9A2 /* ParticipaterVotesViewModel.swift in Sources */,
+				9EF3D84F200AA9AA00DCE9A2 /* EventsMapViewModel.swift in Sources */,
 				34B492D0200A3776000C5945 /* BasicCollectionView.swift in Sources */,
 				34BDEB55200A8EE100916A88 /* EventsMapViewController.swift in Sources */,
+				9EF3D854200AB43F00DCE9A2 /* ParticipaterVotesView.swift in Sources */,
+				9EF3D847200A92FB00DCE9A2 /* OwnerVotesViewModel.swift in Sources */,
 				9EF3D829200A577D00DCE9A2 /* UIImageExtensions.swift in Sources */,
 				9EF3D838200A7B4F00DCE9A2 /* EventViewController.swift in Sources */,
 				34B492CA200A3654000C5945 /* BasicViewController.swift in Sources */,
-				34BDEB5B200ABD4400916A88 /* IndoorwayMapDescription+Floor.swift in Sources */,
 				9EF3D81D200A50C600DCE9A2 /* TabBarViewController.swift in Sources */,
 				3466E7192008DECA00ACEF27 /* ApiService.swift in Sources */,
+				34BDEB62200ABFE200916A88 /* CreateEventViewController.swift in Sources */,
 				34BDEB53200A8EE100916A88 /* EventsMapView.swift in Sources */,
 				34B492C2200A3148000C5945 /* UIFont+AppFonts.swift in Sources */,
 				34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */,
+				9EF3D845200A92F200DCE9A2 /* OwnerVotesViewController.swift in Sources */,
 				34B492CC200A36C1000C5945 /* BasicViews.swift in Sources */,
 				34C55E892008C8960056AC2E /* ViewController.swift in Sources */,
+				34BDEB60200ABFCB00916A88 /* IndoorwayObjectInfo+Room.swift in Sources */,
 				9EF3D836200A792000DCE9A2 /* EventTableViewHeader.swift in Sources */,
 				9EF3D82F200A6CB000DCE9A2 /* Event.swift in Sources */,
+				34BDEB5F200ABFCB00916A88 /* IndoorwayMapDescription+Floor.swift in Sources */,
 				34B492CE200A3714000C5945 /* BasicTableView.swift in Sources */,
 				9EF3D81F200A514D00DCE9A2 /* TabBarViewModel.swift in Sources */,
 				34B492C0200A30F8000C5945 /* UIColor+AppColor.swift in Sources */,
 				3466E7162008D5E200ACEF27 /* R_extensions.swift in Sources */,
 				9EF3D83A200A7B5900DCE9A2 /* EventViewModel.swift in Sources */,
-				34BDEB57200A924D00916A88 /* CreateEventViewController.swift in Sources */,
 				34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

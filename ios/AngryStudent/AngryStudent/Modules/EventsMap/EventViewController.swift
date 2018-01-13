@@ -22,7 +22,6 @@ class EventViewController: BasicViewController {
     lazy var tableView: UITableView = {
         $0.separatorStyle = .none
         $0.register(EventTableViewCell.self, forCellReuseIdentifier: String(describing: EventTableViewCell.self))
-//        $0.register(EventTableViewHeader.self, forHeaderFooterViewReuseIdentifier: String(describing: EventTableViewHeader.self))
         $0.delegate = self
         $0.dataSource = self
         $0.tableFooterView = UIView()
