@@ -18,7 +18,8 @@ public enum Color {
     
     public static var green:            UIColor { return #colorLiteral(red: 0.4980392157, green: 0.7647058824, blue: 0.4980392157, alpha: 1) }
     
-    public static var blueDark:             UIColor { return #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1) }
+    public static var blueDark:         UIColor { return #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1) }
     public static var blue:             UIColor { return #colorLiteral(red: 0.07450980392, green: 0.5490196078, blue: 0.768627451, alpha: 1) }
+    public static var blueLight:        UIColor { return #colorLiteral(red: 0.8719371315, green: 0.90312085, blue: 0.9499138823, alpha: 1) }
     
 }

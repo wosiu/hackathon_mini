@@ -17,8 +17,47 @@ class ExampleAnnotation: NSObject, IndoorwayAnnotation {
   var title: String?
   var subtitle: String?
   
+  
+  static var room211: ExampleAnnotation = ExampleAnnotation(
+    coordinate: IndoorwayLatLon(
+      latitude: 52.2219589680484, // 52.2219467163086,
+      longitude: 21.0067591639562 // 21.0067615509033
+    )
+  )
+  
+  
+  static var room212: ExampleAnnotation = ExampleAnnotation(
+    coordinate: IndoorwayLatLon(
+      latitude: 52.2220465705931, // 52.2220465705931 21.0067572030207
+      longitude: 21.0067572030207 // 21.0067615509033
+    )
+  )
+  
+  static var room213: ExampleAnnotation = ExampleAnnotation(
+    coordinate: IndoorwayLatLon(
+      latitude: 52.2221348895405, // 52.2221348895405 21.0067570552191
+      longitude: 21.0067570552191 // 21.0067615509033
+    )
+  )
+  
+  
+  static var room214: ExampleAnnotation = ExampleAnnotation(
+    coordinate: IndoorwayLatLon(
+      latitude: 52.222219869846, // 52.222219869846 21.0067581477856
+      longitude: 21.0067581477856 // 21.0067615509033
+    )
+  )
+  
+  static var room216: ExampleAnnotation = ExampleAnnotation(
+    coordinate: IndoorwayLatLon(
+      latitude: 52.2223362891784, // 52.2223362891784 21.0067557652251
+      longitude: 21.0067557652251 // 21.0067615509033
+    )
+  )
+  
   init(coordinate: IndoorwayLatLon) {
     title = "ehhh"
+    
     
     self.coordinate = coordinate
     super.init()
@@ -27,9 +66,67 @@ class ExampleAnnotation: NSObject, IndoorwayAnnotation {
 
 
 
+
+
+class EventIcon: IndoorwayAnnotationView {
+  
+  private let imgView: UIImageView = UIImageView(image: #imageLiteral(resourceName: "Book").withRenderingMode(UIImageRenderingMode.alwaysTemplate))
+  
+  override init(annotation: IndoorwayAnnotation?, reuseIdentifier: String?) {
+    super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+    initialize()
+  }
+  
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    initialize()
+  }
+  
+  private func initialize() {
+    
+    backgroundColor = Color.blueLight
+    imgView.tintColor = Color.blue
+    addSubview(imgView)
+    
+    imgView.contentMode = UIViewContentMode.scaleAspectFit
+    
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    layer.cornerRadius = bounds.height/2.0
+   
+    
+    let imgS: CGSize = CGSize(width: CGFloat(17.0), height: CGFloat(17.0))
+    imgView.bounds.size = imgS
+    imgView.center = CGPoint(x: bounds.midX, y: bounds.midY)
+  }
+  
+  
+  override var intrinsicContentSize: CGSize {
+    return CGSize(width: CGFloat(35.0), height: CGFloat(35.0))
+  }
+}
+
+
+
+extension IndoorwayMapView {
+  var scrollView: UIScrollView {
+    for view: UIView in subviews {
+      if let sv: UIScrollView = view as? UIScrollView {
+        return sv
+      }
+    }
+    fatalError("DUPA")
+  }
+}
+
 class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   private let map: IndoorwayMapView = IndoorwayMapView()
   private let mapNotLoadedView: UIView = UIView()
+  
+  
   
   
   func chuj(_ x: IndoorwayLocation) {
@@ -65,6 +162,7 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
     map.frame = bounds
     mapNotLoadedView.frame = map.frame
     
+    print(map.scrollView.maximumZoomScale)
     
     
   }
@@ -87,10 +185,13 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   ///
   /// - parameter mapView: The map view that did finish loading
   @objc func mapViewDidFinishLoadingMap(_ mapView: IndoorwayMapView) {
-    let annotation = ExampleAnnotation(
-      coordinate: IndoorwayLatLon(latitude: 52.2219467163086, longitude: 21.0067615509033)
-    )
-    mapView.addAnnotation(annotation)
+    
+    mapView.addAnnotation(ExampleAnnotation.room211)
+    mapView.addAnnotation(ExampleAnnotation.room212)
+    mapView.addAnnotation(ExampleAnnotation.room213)
+    mapView.addAnnotation(ExampleAnnotation.room214)
+    mapView.addAnnotation(ExampleAnnotation.room216)
+    
   }
   
   /// Method called when map did fail loading map
@@ -106,7 +207,7 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   /// - parameter mapView:  The map view that received tap
   /// - parameter location: The location where tap was received
   @objc func mapView(_ mapView: IndoorwayMapView, didTapLocation location: IndoorwayLatLon) {
-    print("didTapLocation")
+    print("didTapLocation \(location.latitude) \(location.longitude)")
   }
   
   /// Method tells the delegate that the location of the user was updated.
@@ -133,7 +234,8 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   ///
   /// - returns: returns true if object should be selected
   @objc func mapView(_ mapView: IndoorwayMapView, shouldSelectIndoorObject indoorObjectInfo: IndoorwayObjectInfo) -> Bool {
-    print("should select")
+    print("should select \(indoorObjectInfo.objectId)")
+    
     return true
   }
   
@@ -175,23 +277,28 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   @objc func mapView(_ mapView: IndoorwayMapView, viewForAnnotation annotation: IndoorwayAnnotation) -> IndoorwayAnnotationView? {
     var view: IndoorwayAnnotationView? = nil
 
+    
+    print(annotation.title)
     // Example annotation
     if let annotation = annotation as? ExampleAnnotation {
       // Reused annotation view
-
-      if let reusedView = mapView.dequeueReusableAnnotationView(withIdentifier: ExampleMapViewIdentifiers.userLocationAnnotation.rawValue) {
+      
+      i = i + 1
+      if let reusedView = mapView.dequeueReusableAnnotationView(withIdentifier: "\(i)") {
         reusedView.annotation = annotation
         view = reusedView
       }
         // New annotation view
       else {
-        let newView = IndoorwayAnnotationView(annotation: annotation, reuseIdentifier: ExampleMapViewIdentifiers.userLocationAnnotation.rawValue)
+        let newView = EventIcon(annotation: annotation, reuseIdentifier: ExampleMapViewIdentifiers.userLocationAnnotation.rawValue)
         newView.annotation = annotation
-        newView.bounds.size = CGSize(width:30, height: 30)
-        newView.backgroundColor = .blue
-        newView.layer.cornerRadius = newView.bounds.height/2.0
+        newView.bounds.size = newView.intrinsicContentSize
+        
+        
         view = newView
       }
+    } else {
+      print(annotation.title)
     }
 
       // User location view
@@ -200,6 +307,8 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
     return nil
 //    return nil
   }
+  
+  var i = 0
   
   /// Method called when user did select annotation view
   ///
