@@ -37,6 +37,12 @@
 		9EF3D81F200A514D00DCE9A2 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D81E200A514D00DCE9A2 /* TabBarViewModel.swift */; };
 		9EF3D822200A55AC00DCE9A2 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF3D821200A55AC00DCE9A2 /* Friends.storyboard */; };
 		9EF3D829200A577D00DCE9A2 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D828200A577D00DCE9A2 /* UIImageExtensions.swift */; };
+		9EF3D82F200A6CB000DCE9A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D82E200A6CB000DCE9A2 /* Event.swift */; };
+		9EF3D832200A6F5B00DCE9A2 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D831200A6F5B00DCE9A2 /* EventTableViewCell.swift */; };
+		9EF3D836200A792000DCE9A2 /* EventTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D835200A792000DCE9A2 /* EventTableViewHeader.swift */; };
+		9EF3D838200A7B4F00DCE9A2 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D837200A7B4F00DCE9A2 /* EventViewController.swift */; };
+		9EF3D83A200A7B5900DCE9A2 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF3D839200A7B5900DCE9A2 /* EventViewModel.swift */; };
+		9EF3D83C200A7B6900DCE9A2 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF3D83B200A7B6900DCE9A2 /* Events.storyboard */; };
 		EB172C34B60507C89CFE9581 /* Pods_AngryStudent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9007E761F283643100B13E8B /* Pods_AngryStudent.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +114,12 @@
 		9EF3D81E200A514D00DCE9A2 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		9EF3D821200A55AC00DCE9A2 /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		9EF3D828200A577D00DCE9A2 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		9EF3D82E200A6CB000DCE9A2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		9EF3D831200A6F5B00DCE9A2 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		9EF3D835200A792000DCE9A2 /* EventTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewHeader.swift; sourceTree = "<group>"; };
+		9EF3D837200A7B4F00DCE9A2 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = AngryStudent/Modules/EventsMap/EventViewController.swift; sourceTree = SOURCE_ROOT; };
+		9EF3D839200A7B5900DCE9A2 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		9EF3D83B200A7B6900DCE9A2 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		AB552A534060239AB97D6FED /* Pods-AngryStudent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngryStudent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AngryStudent/Pods-AngryStudent.debug.xcconfig"; sourceTree = "<group>"; };
 		F22EBCEAA153FA6A59B600E8 /* Pods-AngryStudent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AngryStudent.release.xcconfig"; path = "Pods/Target Support Files/Pods-AngryStudent/Pods-AngryStudent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -279,7 +291,11 @@
 			isa = PBXGroup;
 			children = (
 				34B492D4200A3C00000C5945 /* home */,
+				34B492D7200A3D11000C5945 /* views */,
+				9EF3D837200A7B4F00DCE9A2 /* EventViewController.swift */,
 				34B492D2200A3A9E000C5945 /* EventsMap.storyboard */,
+				9EF3D839200A7B5900DCE9A2 /* EventViewModel.swift */,
+				9EF3D83B200A7B6900DCE9A2 /* Events.storyboard */,
 			);
 			path = EventsMap;
 			sourceTree = "<group>";
@@ -288,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				34B492D5200A3C0D000C5945 /* EventsMapViewController.swift */,
-				34B492D7200A3D11000C5945 /* views */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -296,6 +311,7 @@
 		34B492D7200A3D11000C5945 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				9EF3D830200A6EF900DCE9A2 /* TableViewCells */,
 				34B492D8200A3D42000C5945 /* EventsMapView.swift */,
 			);
 			path = views;
@@ -327,6 +343,7 @@
 		34C55E852008C8950056AC2E /* AngryStudent */ = {
 			isa = PBXGroup;
 			children = (
+				9EF3D82A200A6C9600DCE9A2 /* Data */,
 				34B492C6200A362B000C5945 /* Common */,
 				3455BE4D200A2C4F00F49E00 /* Modules */,
 				3466E7172008DEB500ACEF27 /* Services */,
@@ -383,6 +400,31 @@
 				9EF3D828200A577D00DCE9A2 /* UIImageExtensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9EF3D82A200A6C9600DCE9A2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9EF3D82B200A6CA100DCE9A2 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9EF3D82B200A6CA100DCE9A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EF3D82E200A6CB000DCE9A2 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9EF3D830200A6EF900DCE9A2 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9EF3D831200A6F5B00DCE9A2 /* EventTableViewCell.swift */,
+				9EF3D835200A792000DCE9A2 /* EventTableViewHeader.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		F9A5B7F4F1376E986FC8389F /* Pods */ = {
@@ -530,6 +572,7 @@
 				9EF3D822200A55AC00DCE9A2 /* Friends.storyboard in Resources */,
 				3466E6F52008D3B800ACEF27 /* strings_screens.xml in Resources */,
 				3466E7142008D5BC00ACEF27 /* Localizable.stringsdict in Resources */,
+				9EF3D83C200A7B6900DCE9A2 /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,9 +614,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AngryStudentUITests/Pods-AngryStudentUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSSQS/AWSSQS.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${PODS_ROOT}/IndoorwaySdk/IndoorwaySdk/IndoorwaySdk.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSQS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IndoorwaySdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -586,9 +652,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AngryStudent/Pods-AngryStudent-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSSQS/AWSSQS.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${PODS_ROOT}/IndoorwaySdk/IndoorwaySdk/IndoorwaySdk.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSQS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IndoorwaySdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -601,9 +690,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AngryStudentTests/Pods-AngryStudentTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSSQS/AWSSQS.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${PODS_ROOT}/IndoorwaySdk/IndoorwaySdk/IndoorwaySdk.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSQS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IndoorwaySdk.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -631,13 +743,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AngryStudent-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF190C981537B88A5997ECB1 /* [CP] Check Pods Manifest.lock */ = {
@@ -646,13 +761,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AngryStudentTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC06DAC7576E210D592F6F3D /* [CP] Check Pods Manifest.lock */ = {
@@ -661,13 +779,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AngryStudentUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBF437FDECA87DCBC32BF632 /* [CP] Copy Pods Resources */ = {
@@ -692,10 +813,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EF3D832200A6F5B00DCE9A2 /* EventTableViewCell.swift in Sources */,
 				34B492D9200A3D42000C5945 /* EventsMapView.swift in Sources */,
 				3466E7122008D5BC00ACEF27 /* R.swift in Sources */,
 				34B492D0200A3776000C5945 /* BasicCollectionView.swift in Sources */,
 				9EF3D829200A577D00DCE9A2 /* UIImageExtensions.swift in Sources */,
+				9EF3D838200A7B4F00DCE9A2 /* EventViewController.swift in Sources */,
 				34B492CA200A3654000C5945 /* BasicViewController.swift in Sources */,
 				9EF3D81D200A50C600DCE9A2 /* TabBarViewController.swift in Sources */,
 				3466E7192008DECA00ACEF27 /* ApiService.swift in Sources */,
@@ -703,11 +826,14 @@
 				34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */,
 				34B492CC200A36C1000C5945 /* BasicViews.swift in Sources */,
 				34C55E892008C8960056AC2E /* ViewController.swift in Sources */,
+				9EF3D836200A792000DCE9A2 /* EventTableViewHeader.swift in Sources */,
+				9EF3D82F200A6CB000DCE9A2 /* Event.swift in Sources */,
 				34B492CE200A3714000C5945 /* BasicTableView.swift in Sources */,
 				9EF3D81F200A514D00DCE9A2 /* TabBarViewModel.swift in Sources */,
 				34B492C0200A30F8000C5945 /* UIColor+AppColor.swift in Sources */,
 				3466E7162008D5E200ACEF27 /* R_extensions.swift in Sources */,
 				34B492D6200A3C0D000C5945 /* EventsMapViewController.swift in Sources */,
+				9EF3D83A200A7B5900DCE9A2 /* EventViewModel.swift in Sources */,
 				34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

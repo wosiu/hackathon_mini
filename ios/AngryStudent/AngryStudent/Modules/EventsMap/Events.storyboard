@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q7j-Tt-yYB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Event View Controller-->
+        <scene sceneID="c0K-63-ab5">
+            <objects>
+                <viewController id="Q7j-Tt-yYB" customClass="EventViewController" customModule="AngryStudent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcq-k6-CrK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4K-DP-SFy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O4K-DP-SFy" firstAttribute="leading" secondItem="fsb-dG-kJG" secondAttribute="leading" id="dCq-js-dSB"/>
+                            <constraint firstItem="fsb-dG-kJG" firstAttribute="bottom" secondItem="O4K-DP-SFy" secondAttribute="bottom" id="o1Z-Yh-sul"/>
+                            <constraint firstItem="fsb-dG-kJG" firstAttribute="trailing" secondItem="O4K-DP-SFy" secondAttribute="trailing" id="tVH-du-gs8"/>
+                            <constraint firstItem="fsb-dG-kJG" firstAttribute="top" secondItem="O4K-DP-SFy" secondAttribute="top" id="xFZ-9e-rBT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fsb-dG-kJG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIC-BN-IIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>

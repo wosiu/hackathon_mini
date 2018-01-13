@@ -51,7 +51,7 @@ class TabBarViewController: UITabBarController {
     }
     
     private func initializeViewControllers() {
-        let eventVC = UIStoryboard(name: "EventsMap", bundle: nil).instantiateInitialViewController()
+        let eventVC = UIStoryboard(name: "Events", bundle: nil).instantiateInitialViewController()
         let mapVC = UIStoryboard(name: "HomeMap", bundle: nil).instantiateInitialViewController()
         let friendsVc = UIStoryboard(name: "Friends", bundle: nil).instantiateInitialViewController()
         tabBarViewControllers = [eventVC!, mapVC!, friendsVc!]
