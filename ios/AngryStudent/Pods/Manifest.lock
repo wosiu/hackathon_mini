@@ -1,28 +1,41 @@
 PODS:
-  - Alamofire (4.6.0)
+  - Alamofire (4.5.1)
   - AlamofireNetworkActivityIndicator (2.2.0):
     - Alamofire (~> 4.5)
-  - IQKeyboardManagerSwift (5.0.6)
+  - AWSCore (2.6.10)
+  - AWSSQS (2.6.10):
+    - AWSCore (= 2.6.10)
+  - IndoorwaySdk (2.0.2):
+    - Alamofire (~> 4.5.1)
+    - AWSSQS (~> 2.6.1)
+    - SwiftyJSON (~> 3.1.4)
+  - IQKeyboardManagerSwift (5.0.7)
   - ObjectMapper (3.1.0)
-  - PromiseKit/Alamofire (4.5.0):
+  - PromiseKit/Alamofire (4.5.1):
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
-  - PromiseKit/CorePromise (4.5.0)
+  - PromiseKit/CorePromise (4.5.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
+  - IndoorwaySdk
   - IQKeyboardManagerSwift
   - ObjectMapper
   - PromiseKit/Alamofire
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
-  IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
+  AWSCore: 5bb072a6b5b185f43ddbd239d6554d2f8a285ad2
+  AWSSQS: 6bcf0f7ebe6e314116017a4d0f379373a5c7b996
+  IndoorwaySdk: 508948adfca82ffe1ea62c42f2ab362019fc81cf
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
+  PromiseKit: 445dac9b2c3c3b4b31b5f842bc325700b848a8bd
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 544e332ab4c4fe3b59692497fc723716db54dd8a
+PODFILE CHECKSUM: 4362a95691952b43d7ea8a06f762ce6cb7e2fb83
 
 COCOAPODS: 1.2.0

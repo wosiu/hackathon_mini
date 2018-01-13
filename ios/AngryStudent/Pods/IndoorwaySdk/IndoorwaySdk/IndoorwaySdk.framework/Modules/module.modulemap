@@ -1,0 +1,11 @@
+framework module IndoorwaySdk {
+  umbrella header "IndoorwaySdk.h"
+
+  export *
+  module * { export * }
+}
+
+module IndoorwaySdk.Swift {
+    header "IndoorwaySdk-Swift.h"
+    requires objc
+}

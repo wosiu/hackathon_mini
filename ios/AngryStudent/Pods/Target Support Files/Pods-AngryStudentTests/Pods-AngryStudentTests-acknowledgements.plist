@@ -14,6 +14,28 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>The AWS Mobile SDK for iOS is generally licensed under the Apache 2.0 License, with the Amazon Cognito Identity Provider and Amazon Cognito Sync subcomponents being licensed under the Amazon Software License and the AWSLex/Bluefront folder under the AWS Customer Agreement (https://aws.amazon.com/agreement/ ). 
+</string>
+			<key>License</key>
+			<string>Apache License, Version 2.0</string>
+			<key>Title</key>
+			<string>AWSCore</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>The AWS Mobile SDK for iOS is generally licensed under the Apache 2.0 License, with the Amazon Cognito Identity Provider and Amazon Cognito Sync subcomponents being licensed under the Amazon Software License and the AWSLex/Bluefront folder under the AWS Customer Agreement (https://aws.amazon.com/agreement/ ). 
+</string>
+			<key>License</key>
+			<string>Apache License, Version 2.0</string>
+			<key>Title</key>
+			<string>AWSSQS</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,19 +94,16 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>IQKeyboardManager license
-=========================
+			<string>MIT License
 
-The MIT License (MIT)
+Copyright (c) 2013-2017 Iftekhar Qurashi
 
-Copyright (c) 2013-16 Iftekhar Qurashi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
@@ -101,6 +120,232 @@ SOFTWARE.
 			<string>MIT</string>
 			<key>Title</key>
 			<string>IQKeyboardManagerSwift</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>This Indoorway software is supplied to you by Indoorway sp. z o.o. (limited liability
+company registered under Polish law; “Indoorway”) subject to your prior acceptance of
+the following terms of use of this software (the “Software”).
+
+By use of the Software you acknowledge that you have read, understood and agree to be
+bound by this terms and to comply with all applicable laws and regulations, including
+all rules, policies, procedures and licenses published by Indoorway that concern Software
+and Indoorway services. If you do not agree to these terms, please do not use this Software
+and Indoorway services.
+
+With the exception of software, libraries and their codes owned by third parties, used by
+Indoorway in the Software under open source basis (specified below), the Software as a
+whole and its substantial parts, SDK libraries, codes as a whole and their parts (modules)
+are the exclusive property of Indoorway and as such cannot be used as a whole or any of their
+parts alone for commercial purposes in any product or service of third party without prior
+Indoorway agreement to such use.
+
+Indoorway hereby grants you a non-exclusive, worldwide, personal (non-transferable), revocable
+license to use and reproduce the Software and its SDK libraries for the purpose of use of
+Indoorway services.
+
+The trademarks, logos and service marks displayed at the Indoorway websites or in the Software
+are owned by Indoorway, its affiliates or business partners.
+
+The Software (including SDK library) is provided “AS IS” without warranty of any kind, expressed
+or implied, including but not limited to implied warranties of merchantability or non-infringement,
+fitness for a particular purpose, regarding the use of the Software alone or as a part of your
+products and services, in particular in combination with or as a plug-in to your software.
+
+In no event shall Indoorway be liable for any special, direct or indirect, incidental or
+consequential damages (including, but not limited to loss of use, data or profits, or any
+business interruption) or other liability, arising from or in connection with the contract
+(including negligence) or tort (including negligence) with respect to the Software (including
+SDK library) or its use.
+
+This legal notes constitute basic reservations concerning your use of the Software and are
+supplemented and specified by Indoorway rules of Indoorway services and license agreements
+on the use of the Software that may be published from time to time by Indoorway. For more
+details please see at www.indoorway.com.
+
+Without any prior notice to you, Indoorway may at any time revise these legal notes and other
+aforesaid rules and licenses. Indoorway may also make any changes, improvements or deletions
+in the Software (or its code) or in any Indoorway services which accompany the Software.
+
+Please find below the list of software/libraries used in or in connection with the Software
+under open source basis and their legal notes:
+
+*	Swift Algorithm Club
+
+	Copyright (c) 2016 Matthijs Hollemans and contributors
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+
+*	Eddystone
+
+	Copyright 2015-2017 Google Inc. All rights reserved.
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*	SwiftyJSON
+
+	The MIT License (MIT)
+
+	Copyright (c) 2017 Ruoyu Fu
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+
+*	Alamofire
+
+	Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+
+* 	AWSCore
+
+	Copyright Amazon Web Services. All rights reserved.
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+*	AWSSQS
+
+	Copyright Amazon Web Services. All rights reserved.
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+* 	Djinni
+
+	Copyright Dropbox. All rights reserved.
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		 http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+* 	Protobuf
+
+	Copyright 2014, Google Inc.  All rights reserved.
+
+	Redistribution and use in source and binary forms, with or without
+	modification, are permitted provided that the following conditions are
+	met:
+
+	    * Redistributions of source code must retain the above copyright
+	notice, this list of conditions and the following disclaimer.
+	    * Redistributions in binary form must reproduce the above
+	copyright notice, this list of conditions and the following disclaimer
+	in the documentation and/or other materials provided with the
+	distribution.
+	    * Neither the name of Google Inc. nor the names of its
+	contributors may be used to endorse or promote products derived from
+	this software without specific prior written permission.
+
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+	"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+	LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+	A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+	OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+	SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+	LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+	DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	Code generated by the Protocol Buffer compiler is owned by the owner
+	of the input file used when generating it.  This code is not
+	standalone and requires a support library to be linked with it.  This
+	support library is itself covered by the above license.
+
+This Indoorway legal notes shall be included in all copies or substantial portions of the Software.
+Copyright © Indoorway Sp. z o.o. All rights reserved.
+</string>
+			<key>License</key>
+			<string>Custom</string>
+			<key>Title</key>
+			<string>IndoorwaySdk</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -149,6 +394,37 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			<string>MIT</string>
 			<key>Title</key>
 			<string>PromiseKit</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>The MIT License (MIT)
+
+Copyright (c) 2016 Ruoyu Fu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>SwiftyJSON</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
