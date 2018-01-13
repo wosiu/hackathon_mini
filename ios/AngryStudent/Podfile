@@ -13,6 +13,9 @@ def shared
   pod 'IQKeyboardManagerSwift'
   
   pod 'IndoorwaySdk'
+
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
 
 

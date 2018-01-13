@@ -8,7 +8,7 @@ public enum Color {
     
     public static var grayDarkest:      UIColor { return #colorLiteral(red: 0.09803921569, green: 0.09803921569, blue: 0.09803921569, alpha: 1) }
     public static var grayDark:         UIColor { return #colorLiteral(red: 0.4078431373, green: 0.3843137255, blue: 0.3843137255, alpha: 1) }
-    public static var gray:             UIColor { return #colorLiteral(red: 0.862745098, green: 0.8392156863, blue: 0.8, alpha: 1) }
+    public static var gray:             UIColor { return #colorLiteral(red: 0.9805274584, green: 0.9586347958, blue: 0.9189741336, alpha: 1) }
     
     public static var red:              UIColor { return #colorLiteral(red: 0.9019607843, green: 0.1294117647, blue: 0.09411764706, alpha: 1) }
     public static var redDark:          UIColor { return #colorLiteral(red: 0.7176470588, green: 0.07450980392, blue: 0.0431372549, alpha: 1) }
