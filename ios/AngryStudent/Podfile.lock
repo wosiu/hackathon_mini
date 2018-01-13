@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
+  - IQKeyboardManagerSwift (5.0.6)
+  - ObjectMapper (3.1.0)
+  - PromiseKit/Alamofire (4.5.0):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireNetworkActivityIndicator
+  - IQKeyboardManagerSwift
+  - ObjectMapper
+  - PromiseKit/Alamofire
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
+  IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
+
+PODFILE CHECKSUM: 544e332ab4c4fe3b59692497fc723716db54dd8a
+
+COCOAPODS: 1.2.0

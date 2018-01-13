@@ -1,0 +1,3 @@
+﻿"test" = "test jest ok";
+"test_parameters1" = "integer %d, napis %@";
+"test_parameters2" = "napis %2$d, integer %1$@";

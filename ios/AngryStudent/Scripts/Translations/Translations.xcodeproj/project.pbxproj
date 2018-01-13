@@ -1,0 +1,132 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		348060652008CB0100E6FE59 /* Translations */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 348060662008CB0100E6FE59 /* Build configuration list for PBXAggregateTarget "Translations" */;
+			buildPhases = (
+				348060692008CB0D00E6FE59 /* import translations script */,
+			);
+			dependencies = (
+			);
+			name = Translations;
+			productName = Translations;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXGroup section */
+		3480605E2008CA3E00E6FE59 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		3480605F2008CA3E00E6FE59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					348060652008CB0100E6FE59 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 348060622008CA3E00E6FE59 /* Build configuration list for PBXProject "Translations" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3480605E2008CA3E00E6FE59;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				348060652008CB0100E6FE59 /* Translations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		348060692008CB0D00E6FE59 /* import translations script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "import translations script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ruby ${PROJECT_DIR}/ios-strings.rb --import-android=${PROJECT_DIR}/../../AngryStudent/TranslationFiles/res --export-ios=${PROJECT_DIR}/../../AngryStudent/TranslationFiles/DO_NOT_EDIT --export-swift";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		348060632008CA3E00E6FE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		348060642008CA3E00E6FE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		348060672008CB0100E6FE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU34X5QPPY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		348060682008CB0100E6FE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU34X5QPPY;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		348060622008CA3E00E6FE59 /* Build configuration list for PBXProject "Translations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				348060632008CA3E00E6FE59 /* Debug */,
+				348060642008CA3E00E6FE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		348060662008CB0100E6FE59 /* Build configuration list for PBXAggregateTarget "Translations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				348060672008CB0100E6FE59 /* Debug */,
+				348060682008CB0100E6FE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3480605F2008CA3E00E6FE59 /* Project object */;
+}

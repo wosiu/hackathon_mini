@@ -1,0 +1,30 @@
+platform :ios, '9.0'
+use_frameworks!
+inhibit_all_warnings!
+
+
+def shared
+  pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator'
+  
+  pod 'PromiseKit/Alamofire'
+  pod 'ObjectMapper'
+  
+  pod 'IQKeyboardManagerSwift'  
+end
+
+
+target 'AngryStudent' do
+  shared
+end
+
+
+
+target 'AngryStudentTests' do
+  shared
+end
+
+target 'AngryStudentUITests' do
+  shared
+end
+
