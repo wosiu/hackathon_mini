@@ -2,11 +2,14 @@ import UIKit
 import IndoorwaySdk
 
 
+fileprivate let createEventSegue: String = "create_event"
 
-class EventsMapViewController: BasicViewController, IndoorwayMapListener, IndoorwayPositionListener {
+
+class EventsMapViewController: BasicViewController, IndoorwayMapListener, IndoorwayPositionListener, EventsMapViewDelegate {
   @IBOutlet private weak var eventsMapView: EventsMapView! {
     didSet {
       updateMap()
+      eventsMapView.delegate = self
     }
   }
   
@@ -40,7 +43,11 @@ class EventsMapViewController: BasicViewController, IndoorwayMapListener, Indoor
     mapSyncing = true
     currentMapDesc = IndoorwayLocationSdk.instance().map.latest()
     isLoading = true
+    
+    navTitle = R.string.main_map_title["MiNI - 2nd floor"]
+    view.backgroundColor = Color.white
   }
+  
   
   
   private var x: IndoorwayLocation? {
@@ -51,11 +58,32 @@ class EventsMapViewController: BasicViewController, IndoorwayMapListener, Indoor
     }
   }
   
+  // MARK: EventsMapViewDelegate
+  func eventsMapView(mapDidLoad view: EventsMapView) {
+    
+  }
+  func eventsMapView(failedLoad view: EventsMapView, with error: Error) {
+    
+  }
+  
+  
+  func eventsMapView(didSelect view: EventsMapView, location: IndoorwayLatLon) {
+    showOkAlert(title: "\(location.latitude) \(location.longitude)", message: nil)
+  }
+  
+  func eventsMapView(didSelect view: EventsMapView, object: IndoorwayObjectInfo) {
+    print(object.objectId)
+//    performSegue(withIdentifier: createEventSegue, sender: object)
+  }
+  
   // MARK: IndoorwayPositionListener
   func positionChanged(position: IndoorwayLocation) {
     
     x = position
   }
+
+  
+  
 
   
   // MARK: IndoorwayMapListener

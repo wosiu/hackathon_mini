@@ -1,14 +1,8 @@
-//
-//  AppDelegate.swift
-//  AngryStudent
-//
-//  Created by Paweł Czerwiński on 12.01.2018.
-//  Copyright © 2018 Paweł Czerwiński. All rights reserved.
-//
-
 import UIKit
 import IndoorwaySdk
 import Alamofire
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +11,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        setUpStyle()
+      
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        IQKeyboardManager.sharedManager().previousNextDisplayMode = IQPreviousNextDisplayMode.alwaysHide
+        IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         IndoorwaySdk.configure(token: ApiService.defaultInstance.indoorAppId)
         window?.rootViewController = TabBarViewController(nibName: nil, bundle: nil)
         window?.makeKeyAndVisible()
+      
         return true
     }
     
@@ -45,6 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    
+    private func setUpStyle() {
+      UINavigationBar.appearance().titleTextAttributes = [
+        NSAttributedStringKey.foregroundColor: Color.blueDark
+      ]
+    }
 }
 

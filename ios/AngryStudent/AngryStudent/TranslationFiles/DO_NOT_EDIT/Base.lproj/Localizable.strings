@@ -1,3 +1,11 @@
-﻿"test" = "test jest ok";
+﻿"common_room_name" = "Room %1$@";
+"create_event_create_btn" = "CREATE";
+"create_event_description_lbl" = "Description";
+"create_event_icon_lbl" = "Select icon";
+"create_event_name_lbl" = "Name";
+"create_event_name_placeholder" = "My event";
+"create_event_title" = "Create event";
+"main_map_title" = "%1$@";
+"test" = "test jest ok";
 "test_parameters1" = "integer %d, napis %@";
 "test_parameters2" = "napis %2$d, integer %1$@";

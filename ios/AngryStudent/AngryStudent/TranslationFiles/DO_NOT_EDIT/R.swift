@@ -5,6 +5,22 @@ import Foundation
 struct R {
 
     enum string : String {
+        /// Room %1$@
+        case common_room_name
+        /// CREATE
+        case create_event_create_btn
+        /// Description
+        case create_event_description_lbl
+        /// Select icon
+        case create_event_icon_lbl
+        /// Name
+        case create_event_name_lbl
+        /// My event
+        case create_event_name_placeholder
+        /// Create event
+        case create_event_title
+        /// %1$@
+        case main_map_title
         /// test jest ok
         case test
         /// integer %d, napis %@

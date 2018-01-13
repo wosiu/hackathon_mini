@@ -8,7 +8,7 @@
 
   <string name="test_parameters1"> integer %d, napis %s </string>
   <string name="test_parameters2"> napis %2$d, integer %1$s </string>
-<!--  <>-->
+
 
   <string name="test"> test &hehe; </string>
   
@@ -18,5 +18,20 @@
     <item quantity="one">mango</item>
     <item quantity="other">%d mangos</item>
   </plurals>
+  
+  <!-- Common -->
+  <string name="common_room_name">Room %1$s</string>
+  
+  <!-- Main map -->
+  <string name="main_map_title">%1$s</string>
+  
+  
+  <!-- Create Event -->
+  <string name="create_event_title">Create event</string>
+  <string name="create_event_icon_lbl">Select icon</string>
+  <string name="create_event_name_lbl">Name</string>
+  <string name="create_event_name_placeholder">My event</string>
+  <string name="create_event_description_lbl">Description</string>
+  <string name="create_event_create_btn">CREATE</string>
   
 </resources>
