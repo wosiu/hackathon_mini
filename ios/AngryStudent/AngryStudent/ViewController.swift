@@ -12,9 +12,6 @@ class ViewController: UIViewController {
         mapView = IndoorwayMapView()
         self.view.addSubview(mapView)
         mapView.frame = view.frame
-      
-      
-      
         configureMap()
         mapView.delegate = self
     }

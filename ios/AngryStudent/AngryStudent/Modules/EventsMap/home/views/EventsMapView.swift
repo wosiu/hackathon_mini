@@ -7,10 +7,6 @@ protocol EventsMapViewDelegate: class {
   func eventsMapView(failedLoad view: EventsMapView, with error: Error)
 }
 
-
-
-
-
 class EventsMapView: BasicView {
   private let map: IndoorwayMapView = IndoorwayMapView()
   
