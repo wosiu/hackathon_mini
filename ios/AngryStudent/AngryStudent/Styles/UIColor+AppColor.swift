@@ -4,11 +4,11 @@ import UIKit
 
 extension UIColor {
   enum app {
-    var white: UIColor {
+    static var white: UIColor {
       return UIColor.white
     }
     
-    var black: UIColor {
+    static var black: UIColor {
       return UIColor.black
     }
   }

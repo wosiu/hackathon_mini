@@ -26,6 +26,7 @@
 		34B492D3200A3A9E000C5945 /* EventsMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B492D2200A3A9E000C5945 /* EventsMap.storyboard */; };
 		34B492D6200A3C0D000C5945 /* EventsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B492D5200A3C0D000C5945 /* EventsMapViewController.swift */; };
 		34B492D9200A3D42000C5945 /* EventsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B492D8200A3D42000C5945 /* EventsMapView.swift */; };
+		34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB4C200A65FB00916A88 /* MapService.swift */; };
 		34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E862008C8960056AC2E /* AppDelegate.swift */; };
 		34C55E892008C8960056AC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E882008C8960056AC2E /* ViewController.swift */; };
 		34C55E8E2008C8960056AC2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C55E8D2008C8960056AC2E /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		34B492D2200A3A9E000C5945 /* EventsMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsMap.storyboard; sourceTree = "<group>"; };
 		34B492D5200A3C0D000C5945 /* EventsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapViewController.swift; sourceTree = "<group>"; };
 		34B492D8200A3D42000C5945 /* EventsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapView.swift; sourceTree = "<group>"; };
+		34BDEB4C200A65FB00916A88 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		34C55E832008C8950056AC2E /* AngryStudent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngryStudent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C55E862008C8960056AC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C55E882008C8960056AC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				3466E7182008DECA00ACEF27 /* ApiService.swift */,
+				34BDEB4C200A65FB00916A88 /* MapService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				34B492CA200A3654000C5945 /* BasicViewController.swift in Sources */,
 				3466E7192008DECA00ACEF27 /* ApiService.swift in Sources */,
 				34B492C2200A3148000C5945 /* UIFont+AppFonts.swift in Sources */,
+				34BDEB4D200A65FB00916A88 /* MapService.swift in Sources */,
 				34B492CC200A36C1000C5945 /* BasicViews.swift in Sources */,
 				34C55E892008C8960056AC2E /* ViewController.swift in Sources */,
 				34B492CE200A3714000C5945 /* BasicTableView.swift in Sources */,
