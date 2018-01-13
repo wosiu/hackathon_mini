@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="kDH-O5-fJx">
             <objects>
-                <viewController id="wSl-h6-Zy5" customClass="ViewController" customModule="AngryStudent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wSl-h6-Zy5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0FP-fi-hoz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
