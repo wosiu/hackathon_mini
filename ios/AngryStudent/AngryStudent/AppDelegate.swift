@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        IndoorwaySdk.configure(token: "7c14025c-47d0-496a-9e3f-5f3a9cf008b5")
-        print(IndoorwaySdk.isApiKeyConfigured())
+        IndoorwaySdk.configure(token: ApiService.defaultInstance.indoorAppId)
+        
         return true
     }
     

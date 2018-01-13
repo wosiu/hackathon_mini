@@ -26,6 +26,15 @@ class ApiService {
   let alamofireManager: SessionManager
   
   
+  let indoorAppId: String = "7c14025c-47d0-496a-9e3f-5f3a9cf008b5"
+  
+  let indoorMiNI: String = "CScrSxCVhQg"
+  
+  let indoor0Floor: String = "7-QLYjkafkE"
+  let indoor1Floor: String = "gVI7XXuBFCQ"
+  let indoor2Floor: String = "3-_M01M3r5w"
+  
+  
   static let defaultInstance: ApiService = ApiService()
   
   

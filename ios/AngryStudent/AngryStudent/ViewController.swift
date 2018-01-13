@@ -1,17 +1,9 @@
-//
-//  ViewController.swift
-//  AngryStudent
-//
-//  Created by Paweł Czerwiński on 12.01.2018.
-//  Copyright © 2018 Paweł Czerwiński. All rights reserved.
-//
-
 import UIKit
 import IndoorwaySdk
 
 class ViewController: UIViewController {
     
-    let des = IndoorwayMapDescription(buildingUuid: "CScrSxCVhQg", mapUuid: "3-_M01M3r5w")
+    let des = IndoorwayMapDescription(buildingUuid: ApiService.defaultInstance.indoorMiNI, mapUuid: ApiService.defaultInstance.indoor2Floor)
     
     private var mapView: IndoorwayMapView!
     
@@ -20,7 +12,9 @@ class ViewController: UIViewController {
         mapView = IndoorwayMapView()
         self.view.addSubview(mapView)
         mapView.frame = view.frame
-        
+      
+      
+      
         configureMap()
         mapView.delegate = self
     }
