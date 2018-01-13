@@ -18,34 +18,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="epi-hQ-7P0" kind="relationship" relationship="viewControllers" id="5Q3-mR-Aqe"/>
-                        <segue destination="CQl-3s-UKA" kind="relationship" relationship="viewControllers" id="YcL-JL-q8A"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPP-Wf-CPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="828" y="117"/>
-        </scene>
-        <!--HomeMap-->
-        <scene sceneID="Guv-xk-K9G">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomeMap" id="epi-hQ-7P0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hcT-7c-c7e"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KVf-Dx-i4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1442" y="-105"/>
-        </scene>
-        <!--EventsMap-->
-        <scene sceneID="4vi-ap-3gr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EventsMap" id="CQl-3s-UKA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uN5-e2-X72"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T7W-Rf-Hto" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1441" y="371"/>
         </scene>
     </scenes>
 </document>

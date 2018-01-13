@@ -6,7 +6,7 @@ class BasicViewController: UIViewController {
     didSet {
       activityIndicator?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
       activityIndicator?.hidesWhenStopped = true
-      activityIndicator?.backgroundColor = UIColor.app.black
+      activityIndicator?.backgroundColor = Color.black
     }
   }
   

@@ -43,7 +43,7 @@ class EventsMapView: BasicView, IndoorwayMapViewDelegate {
   override func initialize() {
     super.initialize()
     
-    backgroundColor = UIColor.app.white
+    backgroundColor = Color.white
     
     addSubview(map)
     addSubview(mapNotLoadedView)
