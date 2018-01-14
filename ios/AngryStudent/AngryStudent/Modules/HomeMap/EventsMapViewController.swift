@@ -85,10 +85,6 @@ class EventsMapViewController: BasicViewController, IndoorwayMapListener, Indoor
     x = position
   }
 
-  
-  
-
-  
   // MARK: IndoorwayMapListener
   func mapChanged(map: IndoorwayMapDescription) {
     

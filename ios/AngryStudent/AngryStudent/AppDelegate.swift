@@ -9,19 +9,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setUpStyle()
-      
-        IQKeyboardManager.sharedManager().enable = true
-        IQKeyboardManager.sharedManager().enableAutoToolbar = false
-        IQKeyboardManager.sharedManager().previousNextDisplayMode = IQPreviousNextDisplayMode.alwaysHide
-        IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = false
-        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
-        IndoorwaySdk.configure(token: ApiService.defaultInstance.indoorAppId)
-        window?.rootViewController = OnboardingViewController()
-        window?.makeKeyAndVisible()
-      
+        setupIQKeyboardManger()
+        setupIndoorway()
+        setupWindow()
         return true
     }
     
@@ -51,6 +43,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       UINavigationBar.appearance().titleTextAttributes = [
         NSAttributedStringKey.foregroundColor: Color.blueDark
       ]
+    }
+    
+    private func setupIQKeyboardManger() {
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        IQKeyboardManager.sharedManager().previousNextDisplayMode = IQPreviousNextDisplayMode.alwaysHide
+        IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+    }
+    
+    private func setupIndoorway() {
+        IndoorwaySdk.configure(token: ApiService.defaultInstance.indoorAppId)
+    }
+    
+    private func setupWindow() {
+        window?.rootViewController = OnboardingViewController()
+        window?.makeKeyAndVisible()
     }
 }
 
