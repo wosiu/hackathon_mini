@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^user/create$', user_create, name='user_create'),
     url(r'^user/update-indoor-room$', update_indoor_room),
     url(r'^group/list$', group_list),
-    url(r'^group/list$-all', group_list_all),
+    url(r'^group/list-all', group_list_all),
     url(r'^group/create$', group_create),
     url(r'^group/enter$', group_enter),
     url(r'^group/refresh$', group_refresh),

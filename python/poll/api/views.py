@@ -68,7 +68,10 @@ def validAndGetGroup(group_id):
 
 def deserialize(request):
     # returns dict
-    return json.loads(request.body)
+    if request.body:
+        return json.loads(request.body)
+
+    return {}
 
 
 @api_view(["GET", "POST"])
@@ -83,9 +86,9 @@ def echo(request):
 
 def get_current_room(userid):
     try:
-        room_id = IndoorRoomUser.objects.filter(user_id=userid).only('indoor_room_id')
+        room_id = IndoorRoomUser.objects.get(user_id=userid).indoor_room_id
     except IndoorRoomUser.DoesNotExist:
-        room_id = None
+        room_id = ""
     return room_id
 
 
@@ -140,6 +143,7 @@ def group_list_result(groups):
     result = []
     for g in groups:
         ownerid = g.owner.id
+        room_id = get_current_room(ownerid)
         r = {
             GROUP_ID: g.id,
             GROUP_HASH: g.hash,
@@ -147,14 +151,9 @@ def group_list_result(groups):
             OWNER_ID: ownerid,
             CURRENT_VIEWERS_NUM: counters[g.id],
             DESCRIPTION: g.description,
-            DATA: g.data
+            DATA: g.data,
+            INDOOR_ROOM_ID: room_id
         }
-
-        # find current owner room
-        room_id = get_current_room(ownerid)
-        if room_id:
-            r[INDOOR_ROOM_ID] = room_id
-
         result.append(r)
     return result
 
@@ -197,7 +196,7 @@ def update_indoor_room(request):
     uid = validAndGetUID(d[SESSION_TOKEN])
     room_id = d[INDOOR_ROOM_ID]
     _update_indoor_room(uid, room_id)
-    return Response([])
+    return Response()
 
 
 # assuming group exist
@@ -262,7 +261,8 @@ def group_create(request):
 
     data = d.get(DATA, '')
     description = d.get(DESCRIPTION, '')
-    new_group = Group(owner=u, name=name, hash=group_hash, data=data, description=description)
+    new_group = Group(owner=u, name=name, hash=group_hash, data=data,
+                      description=description, last_owner_activity=datetime.now())
     new_group.save()
 
     room_id = d.get(INDOOR_ROOM_ID, '')
