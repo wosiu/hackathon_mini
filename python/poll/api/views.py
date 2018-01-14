@@ -378,7 +378,7 @@ def group_join_old(request):
 def group_join(request):
     d = deserialize(request)
     uid = validAndGetUID(d[SESSION_TOKEN])
-    gid = d.get(GROUP_ID, '').upper().strip()
+    gid = d.get(GROUP_ID, '')
     ghash = d.get(GROUP_HASH, '').upper().strip()
 
 
