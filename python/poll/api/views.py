@@ -273,8 +273,11 @@ def group_create(request):
 
 @api_view(["GET", "POST"])
 def group_enter(request):
-    # shhhh, I know.. it's damn hackathon maaan..
-    return group_refresh(request)
+    d = deserialize(request)
+    uid = validAndGetUID(d[SESSION_TOKEN])
+    # todo valid if user has rights to a group
+    gid = d[GROUP_ID]
+    return _group_refresh(uid, gid)
 
 
 '''
