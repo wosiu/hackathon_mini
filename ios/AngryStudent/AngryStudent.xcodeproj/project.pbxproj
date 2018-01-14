@@ -30,6 +30,8 @@
 		34BDEB5F200ABFCB00916A88 /* IndoorwayMapDescription+Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB5D200ABFCA00916A88 /* IndoorwayMapDescription+Floor.swift */; };
 		34BDEB60200ABFCB00916A88 /* IndoorwayObjectInfo+Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB5E200ABFCA00916A88 /* IndoorwayObjectInfo+Room.swift */; };
 		34BDEB62200ABFE200916A88 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB61200ABFE200916A88 /* CreateEventViewController.swift */; };
+		34BDEB64200AC35A00916A88 /* ApiService+Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB63200AC35A00916A88 /* ApiService+Events.swift */; };
+		34BDEB67200AC56400916A88 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDEB66200AC56400916A88 /* OnboardingViewController.swift */; };
 		34C55E872008C8960056AC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E862008C8960056AC2E /* AppDelegate.swift */; };
 		34C55E892008C8960056AC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C55E882008C8960056AC2E /* ViewController.swift */; };
 		34C55E8E2008C8960056AC2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C55E8D2008C8960056AC2E /* Assets.xcassets */; };
@@ -108,6 +110,8 @@
 		34BDEB5D200ABFCA00916A88 /* IndoorwayMapDescription+Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndoorwayMapDescription+Floor.swift"; sourceTree = "<group>"; };
 		34BDEB5E200ABFCA00916A88 /* IndoorwayObjectInfo+Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndoorwayObjectInfo+Room.swift"; sourceTree = "<group>"; };
 		34BDEB61200ABFE200916A88 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		34BDEB63200AC35A00916A88 /* ApiService+Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+Events.swift"; sourceTree = "<group>"; };
+		34BDEB66200AC56400916A88 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		34C55E832008C8950056AC2E /* AngryStudent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngryStudent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C55E862008C8960056AC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C55E882008C8960056AC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		3455BE4D200A2C4F00F49E00 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				34BDEB65200AC55100916A88 /* Onboarding */,
 				9EF3D850200AB3E200DCE9A2 /* ParticipaterVotes */,
 				9EF3D843200A927B00DCE9A2 /* OwnerVotes */,
 				9EF3D81B200A50AA00DCE9A2 /* TabBar */,
@@ -282,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				3466E7182008DECA00ACEF27 /* ApiService.swift */,
+				34BDEB63200AC35A00916A88 /* ApiService+Events.swift */,
 				34BDEB4C200A65FB00916A88 /* MapService.swift */,
 			);
 			path = Services;
@@ -333,6 +339,14 @@
 				9EF3D830200A6EF900DCE9A2 /* TableViewCells */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		34BDEB65200AC55100916A88 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				34BDEB66200AC56400916A88 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		34C55E7A2008C8950056AC2E = {
@@ -856,7 +870,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EF3D849200A938A00DCE9A2 /* GroupEvent.swift in Sources */,
+				34BDEB64200AC35A00916A88 /* ApiService+Events.swift in Sources */,
 				9EF3D832200A6F5B00DCE9A2 /* EventTableViewCell.swift in Sources */,
+				34BDEB67200AC56400916A88 /* OnboardingViewController.swift in Sources */,
 				9EF3D84B200A9B3B00DCE9A2 /* OwnerVotesView.swift in Sources */,
 				3466E7122008D5BC00ACEF27 /* R.swift in Sources */,
 				9EF3D852200AB43000DCE9A2 /* ParticipaterVotesViewModel.swift in Sources */,

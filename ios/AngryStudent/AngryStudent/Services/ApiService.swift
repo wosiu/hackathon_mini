@@ -4,19 +4,24 @@ import Alamofire
 
 
 fileprivate func getServerUrl() -> String {
-  #if ISDEV
-    if TARGET_IPHONE_SIMULATOR != 0 {
-      return "http://staging.kerosine.me/api"
-    } else {
-      return "http://staging.kerosine.me/api"
-    }
-  #else
-    if TARGET_IPHONE_SIMULATOR != 0 {
-      return "http://kerosine.me/api"
-    } else {
-      return "https://kerosine.me/api"
-    }
-  #endif
+  return "http://192.168.100.250:8090/api2"
+}
+
+
+fileprivate func randomString(length: Int) -> String {
+  
+  let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  let len = UInt32(letters.length)
+  
+  var randomString = ""
+  
+  for _ in 0 ..< length {
+    let rand = arc4random_uniform(len)
+    var nextChar = letters.character(at: Int(rand))
+    randomString += NSString(characters: &nextChar, length: 1) as String
+  }
+  
+  return randomString
 }
 
 
@@ -28,12 +33,11 @@ class ApiService {
   
   let indoorAppId: String = "7c14025c-47d0-496a-9e3f-5f3a9cf008b5"
   
-  let indoorMiNI: String = "CScrSxCVhQg"
   
-  let indoor0Floor: String = "7-QLYjkafkE"
-  let indoor1Floor: String = "gVI7XXuBFCQ"
-  let indoor2Floor: String = "3-_M01M3r5w"
+  let userId: String = UIDevice.current.identifierForVendor?.uuidString ?? randomString(length: 50)
   
+  
+  var spamLocationListener: SpamLocationListener?
   
   static let defaultInstance: ApiService = ApiService()
   

@@ -41,8 +41,8 @@ class BasicViewController: UIViewController {
   
   
   
-  func display(error: ApiService.ApiError) {
-    print("todo")
+  func display(error: Error) {
+    print("TODO display error")
   }
   
   

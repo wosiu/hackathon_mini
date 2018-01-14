@@ -3,24 +3,24 @@ import IndoorwaySdk
 
 class ViewController: UIViewController {
     
-    let des = IndoorwayMapDescription(buildingUuid: ApiService.defaultInstance.indoorMiNI, mapUuid: ApiService.defaultInstance.indoor2Floor)
-    
-    private var mapView: IndoorwayMapView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        mapView = IndoorwayMapView()
-        self.view.addSubview(mapView)
-        mapView.frame = view.frame
-        configureMap()
-        mapView.delegate = self
-    }
-
-    private func configureMap() {
-        mapView.loadMap(with: des) { [weak self] (completed) in
-            self?.mapView.showsUserLocation = completed
-        }
-    }
+//    let des = IndoorwayMapDescription(buildingUuid: ApiService.defaultInstance.indoorMiNI, mapUuid: ApiService.defaultInstance.indoor2Floor)
+//    
+//    private var mapView: IndoorwayMapView!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        mapView = IndoorwayMapView()
+//        self.view.addSubview(mapView)
+//        mapView.frame = view.frame
+//        configureMap()
+//        mapView.delegate = self
+//    }
+//
+//    private func configureMap() {
+//        mapView.loadMap(with: des) { [weak self] (completed) in
+//            self?.mapView.showsUserLocation = completed
+//        }
+//    }
     
 }
 

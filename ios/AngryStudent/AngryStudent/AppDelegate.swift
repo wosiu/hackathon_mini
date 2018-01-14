@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().shouldShowToolbarPlaceholder = false
         IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
         IndoorwaySdk.configure(token: ApiService.defaultInstance.indoorAppId)
-        window?.rootViewController = TabBarViewController(nibName: nil, bundle: nil)
+        window?.rootViewController = OnboardingViewController()
         window?.makeKeyAndVisible()
       
         return true
