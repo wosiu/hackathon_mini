@@ -25,7 +25,7 @@ class TabBarViewModel {
     // MARK: - Actions
     
     public func getTabBarItems() -> [UITabBarItem] {
-        let tabBarEvents = UITabBarItem(title: "Event", image: #imageLiteral(resourceName: "CalendarPlus").resizeWith(percentage: eventSizePercentage)?.withRenderingMode(. alwaysOriginal), selectedImage: #imageLiteral(resourceName: "CalendarPlus").resizeWith(percentage: eventSizePercentage))
+        let tabBarEvents = UITabBarItem(title: "Events", image: #imageLiteral(resourceName: "CalendarPlus").resizeWith(percentage: eventSizePercentage)?.withRenderingMode(. alwaysOriginal), selectedImage: #imageLiteral(resourceName: "CalendarPlus").resizeWith(percentage: eventSizePercentage))
         
         let tabBarMap = UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "Map").resizeWith(percentage: mapSizePercentage)?.withRenderingMode(. alwaysOriginal), selectedImage: #imageLiteral(resourceName: "Map").resizeWith(percentage: mapSizePercentage))
         
