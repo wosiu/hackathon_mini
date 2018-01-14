@@ -1,8 +1,7 @@
 import Foundation
 import PromiseKit
 import IndoorwaySdk
-
-
+import ObjectMapper
 
 extension ApiService {
   
@@ -50,6 +49,19 @@ extension ApiService {
       }
     )
   }
+    
+    func getEvents() -> Promise<[Event]> {
+        let url = "\(baseUrl)/user/data?user-id=\(userId)"
+        print("😁 \(url)")
+        return request(url: url,
+                       method: HTTPMethod.get,
+                       parameters: nil,
+                       expectedCodes: [200],
+                       parser: { (json, code) -> [Event] in
+             let events = Mapper<EventsData>().map(JSONString: json)
+            return events?.events ?? []
+        })
+    }
   
   
   func statrtSpammingLocation() {

@@ -50,6 +50,7 @@ class EventViewController: BasicViewController {
         super.viewDidLoad()
         setupUI()
         navTitle = "Events"
+        bindTableView()
     }
     
     // MARK: - Binding
