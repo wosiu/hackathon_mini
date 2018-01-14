@@ -29,6 +29,9 @@ GROUP_NAME = "group-name"
 OWNER_ID = "owner-id"
 GROUP_HASH = "group-hash"
 CURRENT_VIEWERS_NUM = "current-viewers-num"
+DESCRIPTION = "description"
+DATA = "data"
+INDOOR_ROOM_ID = "indoor-room-id"
 VOTE = "vote"
 TIME = "time"
 IDLE = "idle"
@@ -78,9 +81,21 @@ def echo(request):
     return Response(deserialize(request))
 
 
+def get_current_room(userid):
+    try:
+        room_id = IndoorRoomUser.objects.filter(user_id=userid).only('indoor_room_id')
+    except IndoorRoomUser.DoesNotExist:
+        room_id = None
+    return room_id
+
+
 @api_view(["GET", "POST"])
 def user_create(request):
+    d = deserialize(request)
+    user_id = d.get(USER_ID, '')
     new_user = User()
+    if user_id:
+        new_user.id = int(user_id)
     new_user.save()
     return Response({USER_ID: new_user.id})
 
@@ -92,6 +107,11 @@ def getLastVotes(range_sec=900):
 
 def getLastVotesForGroup(group_id, range_sec=900):
     return getLastVotes(range_sec=range_sec).filter(group_id=group_id)
+
+
+def is_group_active(gid):
+    # TODO
+    return True
 
 
 def markIdleIfNoVotes(gid, uid, range_sec=900):
@@ -107,6 +127,38 @@ def markIdleIfNoVotes(gid, uid, range_sec=900):
         v.save()
 
 
+def group_list_result(groups):
+    # join votes count for each group
+    votesQuery = getLastVotes().values("group").annotate(total=Count("group")).order_by('total')
+    counters = defaultdict(int)
+
+    for obj in list(votesQuery):
+        counters[obj["group"]] = obj["total"]
+    # todo could be done nicer by left join, don't have time for that now
+
+    # serialize
+    result = []
+    for g in groups:
+        ownerid = g.owner.id
+        r = {
+            GROUP_ID: g.id,
+            GROUP_HASH: g.hash,
+            GROUP_NAME: g.name,
+            OWNER_ID: ownerid,
+            CURRENT_VIEWERS_NUM: counters[g.id],
+            DESCRIPTION: g.description,
+            DATA: g.data
+        }
+
+        # find current owner room
+        room_id = get_current_room(ownerid)
+        if room_id:
+            r[INDOOR_ROOM_ID] = room_id
+
+        result.append(r)
+    return result
+
+
 @api_view(["GET", "POST"])
 def group_list(request):
     d = deserialize(request)
@@ -119,27 +171,33 @@ def group_list(request):
     groups2 = Group.objects.filter(id__in=groups2)
     groups |= groups2
     groups = groups.distinct()  # in case of a bug when owner is as a participant
+    return Response(group_list_result(groups))
 
-    # join votes count for each group
-    votesQuery = getLastVotes().values("group").annotate(total=Count("group")).order_by('total')
-    counters = defaultdict(int)
 
-    for obj in list(votesQuery):
-        counters[obj["group"]] = obj["total"]
-    # todo could be done nicer by left join, don't have time for that now
+@api_view(["GET", "POST"])
+def group_list_all(request):
+    d = deserialize(request)
+    # get groups user owns
+    groups = Group.objects.all()
+    return Response(group_list_result(groups))
 
-    # serialize
-    result = []
-    for g in groups:
-        result.append({
-            GROUP_ID: g.id,
-            GROUP_HASH: g.hash,
-            GROUP_NAME: g.name,
-            OWNER_ID: g.owner.id,
-            CURRENT_VIEWERS_NUM: counters[g.id]
-        })
 
-    return Response(result)
+def _update_indoor_room(uid, room_id):
+    if room_id:
+        old, created = IndoorRoomUser.objects.update_or_create(user_id=uid,
+                                                               defaults={
+                                                                   'indoor_room_id': room_id,
+                                                                   'last_activity': datetime.now()
+                                                               })
+
+
+@api_view(["GET", "POST"])
+def update_indoor_room(request):
+    d = deserialize(request)
+    uid = validAndGetUID(d[SESSION_TOKEN])
+    room_id = d[INDOOR_ROOM_ID]
+    _update_indoor_room(uid, room_id)
+    return Response([])
 
 
 # assuming group exist
@@ -202,8 +260,14 @@ def group_create(request):
         if not already_used:
             break
 
-    new_group = Group(owner=u, name=name, hash=group_hash)
+    data = d.get(DATA, '')
+    description = d.get(DESCRIPTION, '')
+    new_group = Group(owner=u, name=name, hash=group_hash, data=data, description=description)
     new_group.save()
+
+    room_id = d.get(INDOOR_ROOM_ID, '')
+    _update_indoor_room(u.id, room_id)
+
     return Response({GROUP_ID: new_group.id, GROUP_HASH: group_hash})
 
 
@@ -211,6 +275,25 @@ def group_create(request):
 def group_enter(request):
     # shhhh, I know.. it's damn hackathon maaan..
     return group_refresh(request)
+
+
+'''
+@api_view(["GET", "POST"])
+def group_enter_indoor(request):
+    d = deserialize(request)
+    uid = validAndGetUID(d[SESSION_TOKEN])
+    # todo valid if user has rights to a group
+    room_id = d[INDOOR_ROOM_ID]
+    users_in_room = IndoorRoomUser.objects.filter(indoor_room_id=room_id).only('user')
+    if not users_in_room:
+        return
+    # find if any owner in the room
+    for u in users_in_room:
+        Group.objects.filter(user==u)
+        # TODO
+
+    return _group_refresh(uid, gid)
+'''
 
 
 # assuming group exists
@@ -222,11 +305,16 @@ def groupViewResponse(g):
             GROUP_HASH: "",
             NAME: "Grupa została usunięta przez właściciela",
             VOTES: [],
-            QUESTIONS: []
+            QUESTIONS: [],
+            DESCRIPTION: "",
+            DATA: "",
+            INDOOR_ROOM_ID: ""
         })
 
     stats = collect_group_votes(g.id)
     questions = collect_group_questions(g.id)
+
+    room_id = get_current_room(g.owner.id)
 
     return Response({
         OWNER_ID: g.owner.id,
@@ -234,8 +322,23 @@ def groupViewResponse(g):
         GROUP_HASH: g.hash,
         NAME: g.name,
         VOTES: stats,
-        QUESTIONS: questions
+        QUESTIONS: questions,
+        DESCRIPTION: g.description,
+        DATA: g.data,
+        INDOOR_ROOM_ID: room_id
     })
+
+
+def _group_refresh(uid, gid):
+    g = validAndGetGroup(gid)
+    if g is None:
+        return groupViewResponse(g)
+    if g.owner.id == uid:
+        g.last_owner_activity = datetime.now()
+        g.save()
+    else:
+        markIdleIfNoVotes(gid, uid)
+    return groupViewResponse(g)
 
 
 @api_view(["GET", "POST"])
@@ -244,12 +347,8 @@ def group_refresh(request):
     uid = validAndGetUID(d[SESSION_TOKEN])
     # todo valid if user has rights to a group
     gid = d[GROUP_ID]
-    g = validAndGetGroup(gid)
-    if g is None:
-        return groupViewResponse(g)
-    if g.owner.id != uid:
-        markIdleIfNoVotes(gid, uid)
-    return groupViewResponse(g)
+    return _group_refresh(uid, gid)
+
 
 #deprecated
 @api_view(["GET", "POST"])

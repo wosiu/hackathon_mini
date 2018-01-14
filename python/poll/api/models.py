@@ -12,10 +12,19 @@ class Group(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     hash = models.CharField(max_length=10, unique=True)
+    description = models.CharField(max_length=100, default="")
+    data = models.CharField(max_length=1000, default="")
+    last_owner_activity = models.DateTimeField()
     class Meta:
         indexes = [
             models.Index(fields=["hash"]),
         ]
+
+
+class IndoorRoomUser(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # unique
+    indoor_room_id = models.CharField(max_length=100)
+    last_activity = models.DateTimeField()
 
 
 class GroupUser(models.Model):
