@@ -378,11 +378,15 @@ def group_join_old(request):
 def group_join(request):
     d = deserialize(request)
     uid = validAndGetUID(d[SESSION_TOKEN])
-    ghash = d[GROUP_HASH].upper().strip()
-    print(ghash)
+    gid = d.get(GROUP_ID, '').upper().strip()
+    ghash = d.get(GROUP_HASH, '').upper().strip()
+
 
     try:
-        g = Group.objects.filter(hash=ghash).get()
+        if gid:
+            g = Group.objects.filter(id=gid).get()
+        else:
+            g = Group.objects.filter(hash=ghash).get()
         if g.owner.id != uid:
             # only if not the owner
             # do not add one more if already exist
