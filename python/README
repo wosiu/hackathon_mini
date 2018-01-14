@@ -1,0 +1,12 @@
+on the start: 0_install.sh
+and then each time:
+in screen:
+screen -R as
+
+source env/bin/activate 
+
+
+after model change:
+python manage.py makemigrations api
+
+
